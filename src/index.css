@@ -1,13 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+:root {
+  /* Dark Mode Elements */
+  --darkBlue-dme: hsl(209, 23%, 22%);
+  /* Dark Mode Background */
+  --veryDarkBlue-dmb: hsl(207, 26%, 17%);
+  /* Light Mode Text */
+  --veryDarkBlue-lm-text: hsl(200, 15%, 8%);
+  --darkGray-lm-input: hsl(0, 0%, 52%);
+  /* Light Mode Background */
+  --veryLightGray-lmb: hsl(0, 0%, 98%);
+  /* Dark Mode Text & Light Mode Elements */
+  --white: hsl(0, 0%, 100%);
+}
+
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Nunito Sans', sans-serif, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.containers {
+  color: var(--darkBlue-de);
+  background-color: var(--white);
+  padding: 0 100px;
+}
+.dark__mode__black {
+  @apply dark:bg-gray-800 dark:text-white transition duration-500;
+  -webkit-appearance: none;
+}
+.dark__mode__gray {
+  @apply dark:bg-gray-700 dark:text-white transition duration-500;
+  -webkit-appearance: none;
+}
+@media screen and (max-width: 375px) {
 }

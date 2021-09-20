@@ -1,0 +1,23 @@
+.SearchFilter {
+  padding: 20px 0;
+}
+/* .search input {
+  width: 350px;
+  padding: 10px 20px 10px 30px;
+  outline: none;
+} */
+#country-select {
+  padding: 10px 20px;
+}
+.fa-search {
+  position: absolute;
+  margin: 15px 20px;
+}
+.searchSymbol {
+  /* display: flex;
+  align-items: baseline;
+  justify-content: start; */
+}
+option {
+  padding: 20px;
+}

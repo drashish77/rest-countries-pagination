@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  height: 8vh;
+  font-size: 14px;
+}
+.darkMode {
+  display: flex;
+  align-items: center;
+}
+.hederBox {
+  border: 1px solid gray;
+}
+hr {
+  height: 1px;
+  border-width: 0;
+  color: #bebbbb;
+  background-color: gray;
+  /* box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.2); */
+  box-shadow: inset 0px 0px 5px #fff, 6px 6px 5px 2px #0000;
+}

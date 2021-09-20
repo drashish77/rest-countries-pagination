@@ -1,0 +1,9 @@
+.home {
+  font-size: 14px;
+  /* height: 90vh; */
+  background-color: hsl(0, 0%, 98%);
+}
+.SearchFilter {
+  display: flex;
+  justify-content: space-between;
+}
