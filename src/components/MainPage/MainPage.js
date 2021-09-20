@@ -21,7 +21,7 @@ const MainPage = () => {
       .then((res) => res.json())
       .then(
         (data) => {
-          console.log(data[21])
+          // console.log(data[21])
           setIsLoaded(true)
           setCountries(data)
           setFilteredData(data)
@@ -64,7 +64,7 @@ const MainPage = () => {
     )
   } else {
     return (
-      <div className=''>
+      <div className='dark__mode__black'>
         <FilterSearch
           value={query}
           value2={select}
@@ -74,7 +74,7 @@ const MainPage = () => {
         <div className='mainPage'>
           {filteredData
             .filter((country) => {
-              if (query == '') {
+              if (query === '') {
                 return country
               } else if (
                 country.name.toLowerCase().includes(query.toLowerCase())

@@ -9,7 +9,6 @@ const CountryCard = ({
   capital,
   nativeName,
 }) => {
-  const link = `/details/${nativeName}`
   useDarkMode()
   return (
     <div className='card rounded dark__mode__gray shadow'>

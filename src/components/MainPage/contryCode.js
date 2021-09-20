@@ -252,16 +252,3 @@ export const countryListAlpha3 = {
   ZWE: 'Zimbabwe',
   ALA: 'Åland Islands',
 }
-
-// let bordersArr = country.border && country.border
-// for (var i in countryListAlpha3) {
-//   // console.log(countryListAlpha3[i])
-//   const matched = country.border && i === 'IRN' && countryListAlpha3[i]
-//   // console.log(i)
-//   // console.log(country.border && country.border[0].name)
-//   // console.log(matched)
-// }
-// // const fullName = countryListAlpha3.filter(
-// //   (a) => country.border && a === country.border[0].name
-// // )
-// console.log('🔴', country.border && bordersArr)
