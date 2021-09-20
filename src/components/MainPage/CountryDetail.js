@@ -37,7 +37,7 @@ const CountryDetail = ({ match }) => {
       <div className='dark__mode__black'>
         <div className='lg:p-8 pb-8'>
           <div className='p-5 lg:p-8'>
-            <Link to='/'>
+            <Link to='/rest-countries'>
               <button className='lg:m-0 shadow px-4 py-2'>← Back</button>
             </Link>
           </div>

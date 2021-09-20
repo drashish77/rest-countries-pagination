@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className='dark__mode__gray'>
       <div className='flex justify-between items-center py-5 px-3 md:px-20 text-xs md:text-xl font-bold'>
-        <Link to='/'>
+        <Link to='/rest-countries'>
           <div className=''>
             <h3>Where in the world?</h3>
           </div>

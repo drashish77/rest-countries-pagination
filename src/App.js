@@ -11,7 +11,7 @@ function App() {
         <Header />
 
         <div className='container mx-auto '>
-          <Route path='/' component={MainPage} exact />
+          <Route path='/rest-countries' component={MainPage} exact />
           {/* <MainPage /> */}
           <Route path='/details/:id' component={CountryDetail} />
         </div>
