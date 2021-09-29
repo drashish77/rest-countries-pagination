@@ -2,7 +2,7 @@ const FilterSearch = ({ value, onChange, onChange2, value2 }) => {
   return (
     <div className='px-28'>
       <div className='flex justify-center items-center lg:justify-between flex-col  lg:flex-row py-8  container'>
-        <div className='search flex'>
+        <div className='search flex mb-4 mx-4 lg:mb-0 lg:mx-0'>
           <div className='searchSymbol'>
             <i className='fas fa-search absolute m-4 dark:text-white'></i>
           </div>

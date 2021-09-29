@@ -8,7 +8,6 @@ const CountryDetail = ({ match }) => {
   const [nativeName, setNativeName] = useState('')
   const [error, setError] = useState(null)
   const [isLoaded, setIsLoaded] = useState(false)
-  const url = 'https://restcountries.eu/rest/v2/all'
   const url2 = 'https://restcountries.com/v3.1/all'
 
   useEffect(() => {
