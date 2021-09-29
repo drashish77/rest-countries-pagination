@@ -15,13 +15,14 @@ const MainPage = () => {
   // const [searchParam] = useState(['capital', 'name'])
 
   const url = 'https://restcountries.eu/rest/v2/all'
+  const url2 = 'https://restcountries.com/v3.1/all'
 
   useEffect(() => {
-    fetch(url)
+    fetch(url2)
       .then((res) => res.json())
       .then(
         (data) => {
-          // console.log(data[21])
+          console.log('🔴', data[2].flags.svg)
           setIsLoaded(true)
           setCountries(data)
           setFilteredData(data)
@@ -77,21 +78,23 @@ const MainPage = () => {
               if (query === '') {
                 return country
               } else if (
-                country.name.toLowerCase().includes(query.toLowerCase())
+                country.name.common.toLowerCase().includes(query.toLowerCase())
               ) {
                 return country
               }
             })
             .map((country) => {
               return (
-                <div className='' key={country.callingCodes + Math.random()}>
+                <div className='' key={Math.random()}>
                   <CountryCard
-                    flag={country.flag}
-                    name={country.name}
-                    population={country.population}
+                    flag={country.flags.svg}
+                    name={country.name.common}
+                    // population={country.population}
                     region={country.region}
-                    capital={country.capital}
-                    nativeName={country.nativeName}
+                    capital={country.capital && country.capital[0]}
+                    nativeName={
+                      country.name.nativeName && country.name.nativeName.common
+                    }
                   />
                 </div>
               )
