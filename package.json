@@ -1,6 +1,6 @@
 {
-  "name": "rest-c",
-  "homepage": "https://drashish77.github.io/rest-countries",
+  "name": "rest-c-pagination",
+  "homepage": "https://drashish77.github.io/rest-countries-pagination",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -18,7 +18,7 @@ const CountryDetail = ({ match }) => {
         (data) => {
           setIsLoaded(true)
           const SingleData = data.find((a) => a.name.common === match.params.id)
-          console.log(SingleData)
+          // console.log(SingleData)
           setCountry(SingleData)
           const native =
             typeof Object.values(SingleData.name.nativeName)[1] !== 'undefined'
@@ -46,7 +46,7 @@ const CountryDetail = ({ match }) => {
       <div className='dark__mode__black'>
         <div className='lg:p-8 pb-8'>
           <div className='p-5 lg:p-8'>
-            <Link to='/rest-countries'>
+            <Link to='/rest-countries-pagination'>
               <button className='lg:m-0 shadow px-4 py-2'>← Back</button>
             </Link>
           </div>

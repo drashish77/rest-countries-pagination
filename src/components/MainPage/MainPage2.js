@@ -3,8 +3,9 @@ import { useState } from 'react'
 import FilterSearch from '../filter/FilterSearch'
 import CountryCard from './CountryCard'
 import Loader from './Loader'
+import Pagination from './Pagination'
 
-const MainPage = () => {
+const MainPage2 = () => {
   const [countries, setCountries] = useState([])
   const [error, setError] = useState(null)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -22,7 +23,7 @@ const MainPage = () => {
       .then((res) => res.json())
       .then(
         (data) => {
-          console.log('🔴', data[2].flags.svg)
+          // console.log('🔴', data[2].flags.svg)
           setIsLoaded(true)
           setCountries(data)
           setFilteredData(data)
@@ -33,16 +34,20 @@ const MainPage = () => {
         }
       )
   }, [])
-  //search function
-  // const handleSearch = (event) => {
-  //   let value = event.target.value.toLowerCase()
-  //   let result = []
-  //   result = countries.filter((data) => {
-  //     return data.name.toLowerCase().search(value) !== -1
-  //   })
-  //   setQuery(setFilteredData(result))
-  // }
+  // search function
+  const handleSearch = (event) => {
+    let value = event.target.value.toLowerCase()
+    let result = []
+    result = countries.filter((data) => {
+      return (
+        data.name.common.toLowerCase().search(value) !== -1 ||
+        data.region.toLowerCase().search(value) !== -1
+      )
+    })
+    setQuery(setFilteredData(result))
+  }
   const handleFilter = (event) => {
+    window.location.reload()
     let value = event.target.value.toLowerCase()
     let result = []
     if (value) {
@@ -65,44 +70,19 @@ const MainPage = () => {
     )
   } else {
     return (
-      <div className='dark__mode__black'>
+      <div className='dark__mode__black '>
         <FilterSearch
           value={query}
           value2={select}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => handleSearch(e)}
           onChange2={(e) => handleFilter(e)}
         />
         <div className='mainPage'>
-          {filteredData
-            .filter((country) => {
-              if (query === '') {
-                return country
-              } else if (
-                country.name.common.toLowerCase().includes(query.toLowerCase())
-              ) {
-                return country
-              }
-            })
-            .map((country) => {
-              return (
-                <div className='' key={Math.random()}>
-                  <CountryCard
-                    flag={country.flags.svg}
-                    name={country.name.common}
-                    landlocked={country.landlocked}
-                    region={country.region}
-                    capital={country.capital && country.capital[0]}
-                    nativeName={
-                      country.name.nativeName && country.name.nativeName.common
-                    }
-                  />
-                </div>
-              )
-            })}
+          <Pagination jobs={filteredData} query={query} />
         </div>
       </div>
     )
   }
 }
 
-export default MainPage
+export default MainPage2

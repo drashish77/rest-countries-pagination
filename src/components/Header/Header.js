@@ -1,16 +1,21 @@
 import { Link } from 'react-router-dom'
 import { useDarkMode } from '../../Hook/useDarkMode'
 import './Header.css'
+import { useHistory } from 'react-router-dom'
 const Header = () => {
+  const history = useHistory()
   const [colorTheme, setTheme] = useDarkMode()
+  const home = () => {
+    window.location.reload()
+    history.push('/rest-countries-pagination')
+  }
   return (
-    <div className='dark__mode__gray'>
-      <div className='flex justify-between items-center py-5 px-3 md:px-20 text-xs md:text-xl font-bold'>
-        <Link to='/rest-countries'>
-          <div className=''>
-            <h3>Where in the world?</h3>
-          </div>
-        </Link>
+    <div className='dark__mode__gray px-8 lg:px-28'>
+      <div className='flex justify-between items-center py-5 text-xs md:text-xl font-bold'>
+        <div className='' onClick={home}>
+          <h3>Where in the world?</h3>
+        </div>
+
         <div
           className='darkMode cursor-pointer '
           onClick={() => setTheme(colorTheme)}
@@ -30,7 +35,6 @@ const Header = () => {
           )}
         </div>
       </div>
-      <hr />
     </div>
   )
 }

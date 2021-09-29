@@ -1,14 +1,13 @@
-import './Filter.css'
 const FilterSearch = ({ value, onChange, onChange2, value2 }) => {
   return (
-    <div>
-      <div className='flex justify-between py-8 px-8 container'>
-        <div className='search  flex'>
+    <div className='px-28'>
+      <div className='flex justify-center items-center lg:justify-between flex-col  lg:flex-row py-8  container'>
+        <div className='search flex'>
           <div className='searchSymbol'>
-            <i className='fas fa-search dark:text-white'></i>
+            <i className='fas fa-search absolute m-4 dark:text-white'></i>
           </div>
           <input
-            className='w-96 pl-12 outline-none rounded-sm dark__mode__gray shadow'
+            className='w-96 pl-12 py-3 outline-none rounded-sm dark__mode__gray shadow'
             value={value}
             onChange={onChange}
             type='text'
@@ -20,7 +19,7 @@ const FilterSearch = ({ value, onChange, onChange2, value2 }) => {
 
           <select
             name='country'
-            className='dark__mode__gray outline-none shadow'
+            className='dark__mode__gray outline-none shadow py-3 px-4 rounded'
             id='country-select'
             value={value2}
             onChange={onChange2}

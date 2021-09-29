@@ -4,7 +4,7 @@ import './MainPage.css'
 const CountryCard = ({
   flag,
   name,
-  population,
+  landlocked,
   region,
   capital,
   nativeName,
@@ -32,7 +32,11 @@ const CountryCard = ({
         </Link>
         <div className='card__body mx-2 m-4 '>
           <p className='font-bold '>
-            Population: <span className='font-medium'> {population}</span>
+            Landlocked:{' '}
+            <span className='font-medium'>
+              {' '}
+              {landlocked === true ? 'True' : 'False'}
+            </span>
           </p>
           <p className='font-bold '>
             Region:<span className='font-medium'> {region}</span>
