@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/rest-countries-pagination/static/css/main.85606115.chunk.css",
+    "main.js": "/rest-countries-pagination/static/js/main.badb06ec.chunk.js",
+    "main.js.map": "/rest-countries-pagination/static/js/main.badb06ec.chunk.js.map",
+    "runtime-main.js": "/rest-countries-pagination/static/js/runtime-main.06dbf50c.js",
+    "runtime-main.js.map": "/rest-countries-pagination/static/js/runtime-main.06dbf50c.js.map",
+    "static/js/2.3312007a.chunk.js": "/rest-countries-pagination/static/js/2.3312007a.chunk.js",
+    "static/js/2.3312007a.chunk.js.map": "/rest-countries-pagination/static/js/2.3312007a.chunk.js.map",
+    "static/js/3.061d48fb.chunk.js": "/rest-countries-pagination/static/js/3.061d48fb.chunk.js",
+    "static/js/3.061d48fb.chunk.js.map": "/rest-countries-pagination/static/js/3.061d48fb.chunk.js.map",
+    "index.html": "/rest-countries-pagination/index.html",
+    "static/css/main.85606115.chunk.css.map": "/rest-countries-pagination/static/css/main.85606115.chunk.css.map",
+    "static/js/2.3312007a.chunk.js.LICENSE.txt": "/rest-countries-pagination/static/js/2.3312007a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.06dbf50c.js",
+    "static/js/2.3312007a.chunk.js",
+    "static/css/main.85606115.chunk.css",
+    "static/js/main.badb06ec.chunk.js"
+  ]
+}
