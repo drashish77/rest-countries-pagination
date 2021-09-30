@@ -47,7 +47,7 @@ const MainPage2 = () => {
     setQuery(setFilteredData(result))
   }
   const handleFilter = (event) => {
-    window.location.reload()
+    // window.location.reload()
     let value = event.target.value.toLowerCase()
     let result = []
     if (value) {

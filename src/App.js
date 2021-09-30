@@ -9,11 +9,18 @@ function App() {
       <div className='App dark__mode__black h-screen'>
         <Header />
 
-        <div className='mx-auto'>
+        <div className='mx-auto transition-all duration-500 ease-in-out'>
           {/* Home Page Route extra rest-countries because of going to deploy at  github pages that needs the append so that it will direct to home page otherwise through and error */}
-          <Route path='/rest-countries-pagination' component={MainPage2} exact />
+          <Route
+            path='/rest-countries-pagination'
+            component={MainPage2}
+            exact
+          />
           {/* Detail Page Route */}
-          <Route path='/rest-countries-pagination/details/:id' component={CountryDetail} />
+          <Route
+            path='/rest-countries-pagination/details/:id'
+            component={CountryDetail}
+          />
         </div>
       </div>
     </Router>

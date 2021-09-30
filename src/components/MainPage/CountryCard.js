@@ -11,9 +11,9 @@ const CountryCard = ({
 }) => {
   useDarkMode()
   return (
-    <div className='card rounded dark__mode__gray shadow'>
+    <div className='card rounded dark__mode__gray shadow transition-all duration-500 ease-in-out'>
       <Link to={`/rest-countries-pagination/details/${name}`}>
-        <div className='card__image'>
+        <div className='card__image '>
           <img
             src={flag}
             alt={name}
