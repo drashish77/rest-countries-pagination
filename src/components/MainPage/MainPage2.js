@@ -23,7 +23,6 @@ const MainPage2 = () => {
       .then((res) => res.json())
       .then(
         (data) => {
-          // console.log('🔴', data[2].flags.svg)
           setIsLoaded(true)
           setCountries(data)
           setFilteredData(data)
@@ -35,10 +34,8 @@ const MainPage2 = () => {
       )
   }, [])
   // search function
-  console.log('🔴', typeof query)
   const handleSearch = (event) => {
     let value = event.target.value.toLowerCase()
-    console.log('❌', typeof value)
     let result = []
     result = countries.filter((data) => {
       return (

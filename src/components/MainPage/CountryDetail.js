@@ -101,7 +101,7 @@ const CountryDetail = ({ match }) => {
                     <span className='font-semibold'>Languages: </span>{' '}
                     {country.languages &&
                       Object.values(country.languages).map((a) => (
-                        <span a={Math.random() * 77} className='mr-2'>
+                        <span key={Math.random() * 77} className='mr-2'>
                           {a},
                         </span>
                       ))}

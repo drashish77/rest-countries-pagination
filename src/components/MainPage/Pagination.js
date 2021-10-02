@@ -82,22 +82,23 @@ const Pagination = ({ jobs }) => {
     <div>
       <div className=''>
         <div className='flex flex-col flex-wrap items-center justify-start lg:flex-row '>
-          {currentItems.map((country) => {
-            return (
-              <div className='' key={Math.random()}>
-                <CountryCard
-                  flag={country.flags.svg}
-                  name={country.name.common}
-                  landlocked={country.landlocked}
-                  region={country.region}
-                  capital={country.capital && country.capital[0]}
-                  nativeName={
-                    country.name.nativeName && country.name.nativeName.common
-                  }
-                />
-              </div>
-            )
-          })}
+          {currentPage !== -1 &&
+            currentItems.map((country) => {
+              return (
+                <div className='' key={Math.random()}>
+                  <CountryCard
+                    flag={country.flags.svg}
+                    name={country.name.common}
+                    landlocked={country.landlocked}
+                    region={country.region}
+                    capital={country.capital && country.capital[0]}
+                    nativeName={
+                      country.name.nativeName && country.name.nativeName.common
+                    }
+                  />
+                </div>
+              )
+            })}
         </div>
         {/* pagination page numbers*/}
 
