@@ -46,5 +46,8 @@ body {
   @apply dark:bg-gray-700 dark:text-white transition duration-500;
   -webkit-appearance: none;
 }
+/* .pageNumbers li.active {
+  @apply dark__mode__gray cursor-pointer px-4 py-2;
+} */
 @media screen and (max-width: 375px) {
 }

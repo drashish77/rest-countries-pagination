@@ -5,6 +5,7 @@ const PaginationCard = ({
   handleNextButton,
   pageDecrementBtn,
   pageIncrementBtn,
+  renderPageNumbers,
 }) => {
   return (
     <ul className='pageNumbers py-5 flex justify-center items-center'>
@@ -18,7 +19,7 @@ const PaginationCard = ({
         </button>
       </li>
       {pageDecrementBtn}
-      <li className='dark__mode__gray mx-2 px-4 py-2  shadow'>Pages</li>
+      {renderPageNumbers}
       {pageIncrementBtn}
       <li>
         <button

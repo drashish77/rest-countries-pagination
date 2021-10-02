@@ -7,7 +7,7 @@ const FilterSearch = ({ value, onChange, onChange2, value2 }) => {
             <i className='fas fa-search absolute m-4 dark:text-white'></i>
           </div>
           <input
-            className='w-96 pl-12 py-3 outline-none rounded-sm dark__mode__gray shadow'
+            className='w-64 lg:w-96 pl-12 py-3 outline-none rounded-sm dark__mode__gray shadow'
             value={value}
             onChange={onChange}
             type='text'

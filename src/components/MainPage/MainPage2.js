@@ -7,7 +7,7 @@ import Pagination from './Pagination'
 
 const MainPage2 = () => {
   const [countries, setCountries] = useState([])
-  const [error, setError] = useState(null)
+  const [error, setError] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const [filteredData, setFilteredData] = useState(countries)
   const [query, setQuery] = useState('')
@@ -35,8 +35,10 @@ const MainPage2 = () => {
       )
   }, [])
   // search function
+  console.log('🔴', typeof query)
   const handleSearch = (event) => {
     let value = event.target.value.toLowerCase()
+    console.log('❌', typeof value)
     let result = []
     result = countries.filter((data) => {
       return (
@@ -44,7 +46,8 @@ const MainPage2 = () => {
         data.region.toLowerCase().search(value) !== -1
       )
     })
-    setQuery(setFilteredData(result))
+    setFilteredData(result)
+    setQuery(event.target.value)
   }
   const handleFilter = (event) => {
     // window.location.reload()
@@ -77,6 +80,7 @@ const MainPage2 = () => {
           onChange={(e) => handleSearch(e)}
           onChange2={(e) => handleFilter(e)}
         />
+
         <div className='mainPage'>
           <Pagination jobs={filteredData} query={query} />
         </div>

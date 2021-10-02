@@ -15,10 +15,32 @@ const Pagination = ({ jobs }) => {
   for (let i = 1; i <= Math.ceil(jobs.length / itemsPerPage); i++) {
     pages.push(i)
   }
+  const handleClick = (event) => {
+    setCurrentPage(+event.target.id)
+  }
   const indexOfLastItem = currentPage * itemsPerPage
   const indexOfFirstItem = indexOfLastItem - itemsPerPage
   const currentItems = jobs.slice(indexOfFirstItem, indexOfLastItem)
-
+  const renderPageNumbers = pages.map((number) => {
+    if (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) {
+      return (
+        <li
+          key={number}
+          id={number}
+          onClick={handleClick}
+          className={
+            currentPage === number
+              ? 'dark__mode__gray mx-2 px-4 py-2 shadow'
+              : 'dark__mode__black px-2 py-2 shadow'
+          }
+        >
+          {number}
+        </li>
+      )
+    } else {
+      return null
+    }
+  })
   const handlePrevButton = () => {
     setCurrentPage(currentPage - 1)
     if ((currentPage - 1) % pageNumberLimit == 0) {
@@ -86,6 +108,7 @@ const Pagination = ({ jobs }) => {
           handleNextButton={handleNextButton}
           pageDecrementBtn={pageDecrementBtn}
           pageIncrementBtn={pageIncrementBtn}
+          renderPageNumbers={renderPageNumbers}
         />
       </div>
     </div>
